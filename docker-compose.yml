@@ -12,12 +12,9 @@ services:
     container_name: postgres
     image: postgres:latest
     environment:
-     # - POSTGRES_USER=test
-     # - POSTGRES_PASSWORD=password
-     # - POSTGRES_DB=example
-      - FLASK_ENV=development
-      - DATABASE_URL= postgres://name:password@houst:port/blog_api_db
-      - JWT_SECRET_KEY = 'hhgaghhgsdhdhdd'
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=blog_api_db
     ports:
       - "5432:5432"
     volumes:
