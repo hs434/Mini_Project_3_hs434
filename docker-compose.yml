@@ -6,7 +6,7 @@ services:
     depends_on:
       - database
     ports:
-      - "8000:8000"
+      - "5000:5000"
 
   database:
     container_name: postgres

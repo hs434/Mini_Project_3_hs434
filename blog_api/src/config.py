@@ -17,10 +17,10 @@ class Development(object):
 
     DEBUG = True
     TESTING = False
-    #JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
+    JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
     #SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
     SQLALCHEMY_DATABASE_URI = DATABASE_URL
-    JWT_SECRET_KEY = JWT_SECRET_KEY
+    #JWT_SECRET_KEY = JWT_SECRET_KEY
 
 class Production(object):
     """
@@ -29,9 +29,9 @@ class Production(object):
     DEBUG = False
     TESTING = False
    # SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
-   # JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
+    JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = DATABASE_URL
-    JWT_SECRET_KEY = JWT_SECRET_KEY
+   # JWT_SECRET_KEY = JWT_SECRET_KEY
 
 app_config = {
     'development': Development,

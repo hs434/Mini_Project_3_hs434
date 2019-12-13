@@ -122,6 +122,7 @@ def get_me():
     return custom_response(ser_user, 200)
 
 
+
 def custom_response(res, status_code):
     """
     Custom Response Function
