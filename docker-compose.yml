@@ -5,8 +5,15 @@ services:
     build: .
     depends_on:
       - database
+    expose:
+      - "8000"
     ports:
-      - "5000:5000"
+      - "8000:8000"
+    volumes:
+      - web_volume:/usr/src/app/static
+    environment:
+      - JWT_SECRET_KEY='hhgaghhgsdhdhdd'
+      - DATABASE_URL=f'postgresql+psycopg2://{test}:{password}@{localhost}:{5432}/{blog_api_db}'
 
   database:
     container_name: postgres
@@ -21,3 +28,4 @@ services:
       - db_volume:/var/lib/postgresql
 volumes:
   db_volume:
+  web_volume:
